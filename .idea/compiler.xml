@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="config-repo" />
+        <module name="pinyougou-config" />
+        <module name="pinyougou-eureka" />
+        <module name="pinyougou-gateway" />
+        <module name="pinyougou-generator" />
+        <module name="pinyougou-product" />
+        <module name="pinyougou-tools" />
+        <module name="pinyougou-ui" />
+        <module name="pinyougou-user" />
+        <module name="pinyougou-zipkin" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="pinyougou-common" target="1.8" />
+      <module name="pinyougou-config" target="1.8" />
+      <module name="pinyougou-eureka" target="1.8" />
+      <module name="pinyougou-gateway" target="1.8" />
+      <module name="pinyougou-generator" target="1.8" />
+      <module name="pinyougou-master" target="1.8" />
+      <module name="pinyougou-product" target="1.8" />
+      <module name="pinyougou-provider" target="1.8" />
+      <module name="pinyougou-user" target="1.8" />
+      <module name="pinyougou-zipkin" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="pinyougou-master" options="" />
+    </option>
+  </component>
+</project>

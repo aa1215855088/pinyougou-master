@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/config-repo/config-repo.iml" filepath="$PROJECT_DIR$/config-repo/config-repo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pinyougou-common/pinyougou-common.iml" filepath="$PROJECT_DIR$/pinyougou-common/pinyougou-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pinyougou-config/pinyougou-config.iml" filepath="$PROJECT_DIR$/pinyougou-config/pinyougou-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pinyougou-eureka/pinyougou-eureka.iml" filepath="$PROJECT_DIR$/pinyougou-eureka/pinyougou-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pinyougou-gateway/pinyougou-gateway.iml" filepath="$PROJECT_DIR$/pinyougou-gateway/pinyougou-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pinyougou-generator/pinyougou-generator.iml" filepath="$PROJECT_DIR$/pinyougou-generator/pinyougou-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pinyougou-master.iml" filepath="$PROJECT_DIR$/pinyougou-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pinyougou-provider/pinyougou-product/pinyougou-product.iml" filepath="$PROJECT_DIR$/pinyougou-provider/pinyougou-product/pinyougou-product.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pinyougou-provider/pinyougou-provider.iml" filepath="$PROJECT_DIR$/pinyougou-provider/pinyougou-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pinyougou-tools/pinyougou-tools.iml" filepath="$PROJECT_DIR$/pinyougou-tools/pinyougou-tools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pinyougou-ui/pinyougou-ui.iml" filepath="$PROJECT_DIR$/pinyougou-ui/pinyougou-ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pinyougou-provider/pinyougou-user/pinyougou-user.iml" filepath="$PROJECT_DIR$/pinyougou-provider/pinyougou-user/pinyougou-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pinyougou-zipkin/pinyougou-zipkin.iml" filepath="$PROJECT_DIR$/pinyougou-zipkin/pinyougou-zipkin.iml" />
+    </modules>
+  </component>
+</project>

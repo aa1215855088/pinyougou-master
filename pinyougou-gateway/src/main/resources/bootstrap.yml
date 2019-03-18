@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: pinyougou-gateway-server
+  profiles:
+    active: dev
+  output:
+    ansi:
+      enabled: detect
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8000/eureka/
+  instance:
+    hostname: localhost
+
+
+

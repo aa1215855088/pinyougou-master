@@ -1,0 +1,59 @@
+server:
+  port: 8888
+
+spring:
+  http:
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
+    multipart:
+      enabled: true
+      max-request-size: 50MB
+      max-file-size: 50MB
+
+zuul:
+  host:
+    socket-timeout-millis: 60000
+    connect-timeout-millis: 60000
+  forceOriginalQueryStringEncoding: true
+  routes:
+    product-route:
+      path: /product/**
+      sensitiveHeaders:
+      service-id: pinyougou-product-server
+      ribbon:
+        eager-load:
+          enabled: true
+        MaxAutoRetries: 1
+        MaxAutoRetriesNextServer: 2
+        OkToRetryOnAllOperations: false
+        ConnectTimeout: 10000
+        ReadTimeout: 10000
+    user-route:
+      path: /user/**
+      sensitiveHeaders:
+      service-id: pinyougou-user-server
+      ribbon:
+        eager-load:
+          enabled: true
+        MaxAutoRetries: 1
+        MaxAutoRetriesNextServer: 2
+        OkToRetryOnAllOperations: false
+        ConnectTimeout: 10000
+        ReadTimeout: 10000
+
+swagger:
+  enabled: true
+
+security:
+  oauth2:
+    client:
+      access-token-uri: http://localhost:8888/user/oauth/token
+      user-authorization-uri: http://localhost:8888/user/oauth/authorize
+      client-id: pinyougou-zuul-client
+    resource:
+      user-info-uri: http://localhost:8888/user/user
+      prefer-token-info: false
+  basic:
+    enabled: false

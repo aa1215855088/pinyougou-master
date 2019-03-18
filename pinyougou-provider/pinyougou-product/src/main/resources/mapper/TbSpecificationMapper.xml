@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pinyougou.product.mapper.TbSpecificationMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.pinyougou.product.model.domain.TbSpecification">
+        <id column="id" property="id"/>
+        <result column="spec_name" property="specName"/>
+        <collection property="specificationOptionList"
+                    ofType="com.pinyougou.product.model.domain.TbSpecificationOption">
+            <id column="oid" property="id"/>
+            <result column="option_name" property="optionName"/>
+            <result column="orders" property="orders"/>
+        </collection>
+    </resultMap>
+    <select id="findById" resultMap="BaseResultMap">
+        select
+            ts.id,
+            ts.spec_name,
+            tso.id oid,
+            tso.option_name,
+            tso.orders
+        from tb_specification ts
+                 left join tb_specification_option tso on ts.id = tso.spec_id
+        where ts.id = #{id};
+    </select>
+    <select id="findOptionList" resultType="java.util.Map">
+        select id, spec_name as text
+        from tb_specification;
+    </select>
+
+</mapper>

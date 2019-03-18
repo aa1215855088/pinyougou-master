@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: pinyougou-product-server
+  profiles:
+    active: dev
+  cloud:
+    config:5
+      fail-fast: true
+      discovery:
+        service-id: pinyougou-config-server
+        enabled: true
+      profile: ${spring.profiles.active}
+  output:
+    ansi:
+      enabled: detect
+
+server:
+  port: 8001
+
+
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8000/eureka/
+  instance:
+    hostname: localhost
+
+security:
+  basic:
+    enabled: false
+  oauth2:
+    client:
+      client-id: productClientId
+      client-secret: secret
+      access-token-uri: http://localhost:8888/user/oauth/token
+      user-authorization-uri: http://localhost:8888/user/oauth/authorize
+    resource:
+      user-info-uri: http://localhost:8888/user/user
+      prefer-token-info: false
+
+
+
+
+swagger:
+  enabled: true

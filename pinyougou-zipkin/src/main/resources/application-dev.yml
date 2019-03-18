@@ -1,0 +1,20 @@
+server:
+  port: 9000
+
+# datasoure默认使用JDBC
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/pinyougoudb?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
+
+zipkin:
+  collector:
+    rabbitmq:
+      addresses: 127.0.0.1:5672
+      password: admin
+      username: admin
+      queue: zipkin
+  storage:
+    type: mysql

@@ -1,0 +1,32 @@
+server:
+  port: 4001
+spring:
+  application:
+    name: pinyougou-config-server
+  profiles:
+    active: dev
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/aa1215855088/pinyougou-config
+          search-paths: /*
+          username: aa1215855088
+          password: xuzilou22
+
+
+# 关闭安全管理
+security:
+  basic:
+    enabled: false
+
+
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8000/eureka/
+  instance:
+    hostname: localhost
